@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*@section featured {
+   
+}*@
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post, new { id = "frmBet", role = "form-horizontal" }))
+{
+        <div class="row">
+            <label class="col-md-2 control-label">Bet Table Id</label>
+            <div class="col-md-4">
+                <input class="form-control" id="txtTableId" type="text">
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <label class="col-md-2 control-label">Coordinator</label>
+            <div class="col-md-4">
+                <input class="form-control" id="txtCoordinator" type="text">
+            </div>
+        </div>
+        <br />
+    <div class="row" style="padding-left:30px;">
+        <button id="btnStart" name="btnStart" class="btn btn-success btn-lg col-sm-2" type="button">Start Bet</button>
+    </div>
+        <br />
+        <div class="panel" id="pnlNoofPlayers">
+            <div class="row" style="padding-left:30px;">
+                <label class="col-md-12 control-label">Please select Number of Players</label>
+            </div>
+            <br>
+            <div class="row" style="padding-left:30px;">
+                <button id="btnPlayer1" name="btnPlayer1" class="btn btn-info btn-lg col-sm-2" type="button">1</button>
+                <button id="btnPlayer2" name="btnPlayer2" class="btn btn-info btn-lg col-sm-2" type="button">2</button>
+                <button id="btnPlayer3" name="btnPlayer3" class="btn btn-info btn-lg col-sm-2" type="button">3</button>
+                <button id="btnPlayer4" name="btnPlayer4" class="btn btn-info btn-lg col-sm-2" type="button">4</button>
+            </div>
+            <br>
+        </div>
+        <br />
+    <div class="row" id="pnlRecordBet" style="padding-left:30px;">
+       
+        <button id="btnPlayerBet" name="btnPlayerBet" class="btn btn-warning btn-lg col-sm-2" type="button">Record Bet </button>
+       
+    </div>
+            <br />
+        <div class="row" id="pnlSaveBet">
+         
+            <button id="btnSaveBet" name="btnSaveBet" class="btn btn-success btn-lg col-md-4" type="button">Save Bet</button>
+         
+         
+            <button id="btnClear" name="btnClear" class="btn btn-danger btn-lg col-md-4" type="button">Clear</button>
+         
+        </div>
+        <br />
+        <div>
+            <h2>Bet Records</h2>
+            <table class="bordered" id="BetTbl">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Table ID</th>
+                        <th>Coordinator</th>
+                        <th>Numbe of Players</th>
+                        <th>Starting Time</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <br/>
+        </div>
+}   
+
+<script>
+
+
+</script>
